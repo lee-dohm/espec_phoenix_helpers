@@ -10,7 +10,8 @@ defmodule ESpec.Phoenix.Assertions.Conn.Helpers do
   def be_server_error, do: {ESpec.Phoenix.Assertions.Conn.BeServerError, []}
   def be_error, do: {ESpec.Phoenix.Assertions.Conn.BeServerError, []}
 
-  def redirect_to(value), do: { ESpec.Phoenix.Assertions.Conn.RedirectTo, value}
+  def redirect_to(value), do: {ESpec.Phoenix.Assertions.Conn.RedirectTo, value}
+  def redirect_to_match(value), do: {ESpec.Phoenix.Assertions.Conn.RedirectToMatch, value}
 
   def have_in_assigns(value), do: {ESpec.Phoenix.Assertions.Conn.HaveInAssigns, value}
   def have_in_flash(value), do: {ESpec.Phoenix.Assertions.Conn.HaveInFlash, value}
